@@ -1,11 +1,8 @@
 
 
-# (WACV-2024) GC-MVSNet: Multi-View, Multi-Scale, Geometrically-Consistent Multi-View Stereo
+# Blending 3D Geometry and Machine Learning for Multi-View Stereopsis
 
-Authors: Vibhas Vats, Sripad Joshi, Md. Reza, David Crandall, Soon-heung Jung
-
-
-## [Paper]() | [Project Page](https://vkvats.github.io/GCMVSNet-page/) | [Arxiv](https://arxiv.org/abs/2310.19583)
+Authors: Vibhas K. Vats, Md. Alimoor Reza, David J. Crandall, and Soon-heung Jung
 
 **NOTE**: Please contact Vibhas Vats (vkvatsdss@gamil.com) for any help. 
 
@@ -15,7 +12,7 @@ Authors: Vibhas Vats, Sripad Joshi, Md. Reza, David Crandall, Soon-heung Jung
 Traditional multi-view stereo (MVS) methods rely heavily on photometric and geometric consistency constraints, but newer machine learning-based MVS methods check geometric consistency across multiple source views only as a post-processing step. In this paper, we present a novel approach that explicitly encourages geometric consistency of reference view depth maps across multiple source views at different scales during learning (see Fig. 1). We find that adding this geometric consistency loss significantly accelerates learning by explicitly penalizing geometrically inconsistent pixels, reducing the training iteration requirements to nearly half that of other MVS methods. Our extensive experiments show that our approach achieves a new state-of-the-art on the DTU and BlendedMVS datasets, and competitive results on the Tanks and Temples benchmark. To the best of our knowledge, GC-MVSNet is the first attempt to enforce multi-view, multi-scale geometric consistency during learning.
 
 
-## GC-MVSNet Architecture
+## GC-MVSNet++ Architecture
 ![](assets/gcmvsnet.png)
 
 
