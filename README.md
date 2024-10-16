@@ -219,6 +219,14 @@ For quantitative evaluation, you can upload your point clouds to [Tanks and Temp
     year      = {2024},
     pages     = {3242--3252},
 }
+@InProceedings{vats2024gcmvsnet++,
+    author    = {Vats, Vibhas K and Crandall, David and Reza, Md. and Jung, Soon-heung },
+    title     = {Blending 3D Geometry and Machine Learning for Multi-View Stereopsis},
+    booktitle = {xxx},
+    month     = {January},
+    year      = {2024},
+    pages     = {0000},
+}
 ```
 
 ## Acknowledgments
