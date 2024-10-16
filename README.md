@@ -127,9 +127,6 @@ For a fair comparison with other SOTA methods on Tanks and Temples benchmark, we
 
 Set the configuration in ``finetune_bld.sh``:
 
-[comment]: <> (## TESTING)
-[comment]: <> (For easy testing, you can download our [pre-trained models](https://drive.google.com/file/d/1oP2WtoASEentfe1dVtPTUFmhMiRmCj6W/view?usp=sharing) and put them in `checkpoints` folder, or use your own models and follow the instruction below.)
-
 ### Testing on DTU
 
 **Important Tips:** to reproduce our reported results, you need to:
@@ -185,8 +182,12 @@ SampleSet
 ```
 In ``DTU-MATLAB/BaseEvalMain_web.m``, set `dataPath` as path to `SampleSet/MVS Data/`, `plyPath` as directory that stores the reconstructed point clouds and `resultsPath` as directory to store the evaluation results. Then run ``DTU-MATLAB/BaseEvalMain_web.m`` in matlab.
 
+#### GC-MVSNet ++ evaluation on DTU and BlendedMVS dataset
 
 ![](assets/dtuandblended.png)
+
+#### GC-MVSNet ++ evaluation on Tanks and Temples dataset
+
 ![](assets/tanksandtemples.png)
 
 
