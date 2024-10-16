@@ -9,7 +9,29 @@ Authors: Vibhas K. Vats, Md. Alimoor Reza, David J. Crandall, and Soon-heung Jun
 ![](assets/overview.png)
 
 ## Abstract
-Traditional multi-view stereo (MVS) methods rely heavily on photometric and geometric consistency constraints, but newer machine learning-based MVS methods check geometric consistency across multiple source views only as a post-processing step. In this paper, we present a novel approach that explicitly encourages geometric consistency of reference view depth maps across multiple source views at different scales during learning (see Fig. 1). We find that adding this geometric consistency loss significantly accelerates learning by explicitly penalizing geometrically inconsistent pixels, reducing the training iteration requirements to nearly half that of other MVS methods. Our extensive experiments show that our approach achieves a new state-of-the-art on the DTU and BlendedMVS datasets, and competitive results on the Tanks and Temples benchmark. To the best of our knowledge, GC-MVSNet is the first attempt to enforce multi-view, multi-scale geometric consistency during learning.
+Traditional multi-view stereo (MVS) methods primarily depend on 
+photometric and geometric consistency constraints. 
+In contrast, modern learning-based algorithms often rely 
+on the plane sweep algorithm to infer 3D geometry, 
+applying explicit geometric consistency (GC) checks 
+only as a post-processing step, with no impact on the 
+learning process itself. In this work, we introduce GC-MVSNet++, 
+a novel approach that actively enforces geometric consistency of 
+reference view depth maps across multiple source views (multi-view) 
+and at various scales (multi-scale) during the learning phase (see Fig. 1 above). 
+This integrated GC check significantly accelerates the learning 
+process by directly penalizing geometrically inconsistent pixels, 
+effectively halving the number of training iterations 
+compared to other MVS methods. Furthermore, we introduce a densely connected 
+cost regularization network with two distinct block 
+designs—simple and feature-dense—optimized to harness dense 
+feature connections for enhanced regularization. 
+Extensive experiments demonstrate 
+that our approach achieves a new state-of-the-art on the 
+DTU and BlendedMVS datasets secure second place 
+on the Tanks and Temples benchmark. To our knowledge, 
+GC-MVSNet++ is the first method to enforce multi-view, 
+multi-scale geometric consistency during learning.
 
 
 ## GC-MVSNet++ Architecture
@@ -105,8 +127,8 @@ For a fair comparison with other SOTA methods on Tanks and Temples benchmark, we
 
 Set the configuration in ``finetune_bld.sh``:
 
-## TESTING
-For easy testing, you can download our [pre-trained models](https://drive.google.com/file/d/1oP2WtoASEentfe1dVtPTUFmhMiRmCj6W/view?usp=sharing) and put them in `checkpoints` folder, or use your own models and follow the instruction below.
+[comment]: <> (## TESTING)
+[comment]: <> (For easy testing, you can download our [pre-trained models](https://drive.google.com/file/d/1oP2WtoASEentfe1dVtPTUFmhMiRmCj6W/view?usp=sharing) and put them in `checkpoints` folder, or use your own models and follow the instruction below.)
 
 ### Testing on DTU
 
@@ -164,10 +186,8 @@ SampleSet
 In ``DTU-MATLAB/BaseEvalMain_web.m``, set `dataPath` as path to `SampleSet/MVS Data/`, `plyPath` as directory that stores the reconstructed point clouds and `resultsPath` as directory to store the evaluation results. Then run ``DTU-MATLAB/BaseEvalMain_web.m`` in matlab.
 
 
-| Evaluation hyperparameter| Acc. (mm) | Comp. (mm) | Overall (mm) |
-|--------------------------|-----------|------------|--------------|
-| Common for all scenes    | 0.330     | 0.260      | 0.295        |
-| Optimal for each scene | 0.323     | 0.255      | 0.289        |
+![](assets/dtuandblended.png)
+![](assets/tanksandtemples.png)
 
 
 
