@@ -2,6 +2,8 @@
 
 # Blending 3D Geometry and Machine Learning for Multi-View Stereopsis
 
+## [Prepring-ArXiv](https://arxiv.org/abs/2505.03470)
+
 Authors: Vibhas K. Vats, Md. Alimoor Reza, David J. Crandall, and Soon-heung Jung
 
 **NOTE**: Please contact Vibhas Vats (vkvatsdss@gamil.com) for any help. 
